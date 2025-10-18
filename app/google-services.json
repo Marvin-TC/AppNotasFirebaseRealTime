@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "955932067193",
+    "project_id": "fir-realtimedatabase-7454c",
+    "storage_bucket": "fir-realtimedatabase-7454c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955932067193:android:d59afc435fcad709351ba8",
+        "android_client_info": {
+          "package_name": "com.kobux.firebaserealtimedatabase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsL4WIiD3Q_vOuZwWJA_v4EszXb2Hxukw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

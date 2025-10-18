@@ -1,0 +1,80 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Encabezado de la nota -->
+        <TextView
+            android:id="@+id/textTituloNota"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textDescripcionNota"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/textFechaNota"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Botón de expandir tareas -->
+        <LinearLayout
+            android:id="@+id/layoutExpandir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnExpandirTareas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver tareas"
+                android:textSize="13sp"
+                android:backgroundTint="@color/black"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Contenedor de tareas expandible -->
+        <LinearLayout
+            android:id="@+id/layoutTareasContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="6dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTareasNota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
