@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements OnTareaInteractio
     private String userUid;
     private TextView textEmpty;
     private MaterialToolbar toolbar;
+    private String URL = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements OnTareaInteractio
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        db = FirebaseDatabase.getInstance("https://fir-realtimedatabase-7454c-default-rtdb.firebaseio.com/");
+        db = FirebaseDatabase.getInstance(URL);
         notasRef = db.getReference().child(userUid).child("notas");
 
         recyclerNotas = findViewById(R.id.recycler);

@@ -40,8 +40,9 @@ public class FormularioNotas extends AppCompatActivity {
     List<TareasModel> tareas;
     Button btnregistrarNota;
     Button btnRegistrarTarea;
-    String keyNota = null;
-    String userUid;
+    private String keyNota = null;
+    private String userUid;
+    private String URL = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +67,7 @@ public class FormularioNotas extends AppCompatActivity {
 
         userUid = getIntent().getStringExtra("USER_UID");
 
-        db = FirebaseDatabase.getInstance("https://fir-realtimedatabase-7454c-default-rtdb.firebaseio.com/");
+        db = FirebaseDatabase.getInstance(URL);
         notasRef = db.getReference().child(userUid).child("notas");
 
         keyNota = notasRef.push().getKey();
